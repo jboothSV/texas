@@ -85,31 +85,37 @@ h1 {
     font-size: 46px;
     line-height: 52px;
     margin-bottom: 20px;
+    font-family: trade-gothic-next-condensed, sans-serif;
 }
 h2 {
     font-size: 42px;
     line-height: 48px;
     margin-bottom: 20px;
+    font-family: trade-gothic-next-condensed, sans-serif;
 }
 h3 {
     font-size: 36px;
     line-height: 42px;
     margin-bottom: 15px;
+    font-family: trade-gothic-next-condensed, sans-serif;
 }
 h4 {
     font-size: 30px;
     line-height: 34px;
     margin-bottom: 15px;
+    font-family: trade-gothic-next-condensed, sans-serif;
 }
 h5 {
     font-size: 26px;
     line-height: 30px;
     margin-bottom: 10px;
+    font-family: trade-gothic-next-condensed, sans-serif;
 }
 h6 {
     font-size: 22px;
     line-height: 26px;
     margin-bottom: 10px;
+    font-family: trade-gothic-next-condensed, sans-serif;
 }
 h1 > a,
 h2 > a,
@@ -162,21 +168,28 @@ ul { margin-left: 1.8em; }
 */
 
 .header-section {
-    position: fixed;
+    /* position: fixed;
     top: 0;
     left: 0;
     z-index: 999;
     height: 65px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto; */
 }
 
 .header-section .top-nav-cont {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 15px 25px;
     background: rgba(0,0,0,0.375);
+    z-index: 1000;
+    pointer-events: all;
 }
 
 .header-section .hamburger {
