@@ -13,10 +13,9 @@
     position: relative;
     border-top: 2px solid white;
     border-bottom: 2px solid white;
-    flex-grow: 1;
+    flex-grow: 0;
     flex-shrink: 1;
-    flex-basis: 50%;
-
+    flex-basis: calc(50% - 2px);
 }
 
 .highlight-panel .highlight .img-cont {
@@ -59,6 +58,12 @@
     text-align: center;
 }
 
+@supports (display: grid) {
+    .highlight-panel .highlight {
+        flex-basis: 50%;
+    }
+}
+
 @media (min-width: 641px) {
     .highlight-panel .highlight .title h4 {
         font-size: 24px;
@@ -76,7 +81,7 @@
         margin: 0 -2px;
     }
     .highlight-panel .highlight {
-        flex-basis: 16.6666%;
+        flex-basis: calc(16.6666% - 4px);
         border-top: 2px solid white;
         border-bottom: 2px solid white;
         border-right: 2px solid white;
@@ -88,6 +93,14 @@
     .highlight-panel .highlight .title {
         width: 60%;
     }
+    @supports (display: grid) {
+        .highlight-panel .highlight {
+            flex-basis: 16.6666%;
+        }
+    }
+}
+
+@media (min-width: 1199px) {
     .highlight-panel .highlight .title h4 {
         font-size: 36px;
         line-height: 40px;
