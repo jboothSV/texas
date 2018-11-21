@@ -162,12 +162,75 @@ ul { margin-left: 1.8em; }
 */
 
 .header-section {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     z-index: 999;
-    height: 100%;
+    height: 65px;
     width: 100%;
     margin: 0 auto;
 }
+
+.header-section .top-nav-cont {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px;
+    background: rgba(0,0,0,0.375);
+}
+
+.header-section .hamburger {
+    position: relative;
+    font-size: 16px;
+}
+
+.header-section .controls-inner {
+    display: flex;
+    align-items: center;
+}
+
+.header-section .controls-inner span {
+    display: inline-block;
+    margin-left: 10px;
+    color: white;
+}
+
+.header-section .hamburger .menu-control {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 1.5em;
+}
+
+.header-section .hamburger #icon-close {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: white;
+    width: 1em;
+    height: 1.5em;
+    opacity: 0;
+}
+
+.header-section .hamburger .nav-bars {
+    display: flex;
+    flex-direction: column;
+    width: 34px;
+}
+
+.header-section .hamburger .nav-bars .nav-bar {
+    width: 100%;
+    height: 2px;
+    margin-bottom: 4px;
+    background-color: white;
+}
+
+.header-section .hamburger .nav-bars .nav-bar:last-child {
+    margin-bottom: 0;
+}
+
 /*
 |-----------------------------------------------------------------------------------------------------------
 | BODY SECTION
