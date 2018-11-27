@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Simpleville CVB Cutup</title>
@@ -8,7 +9,7 @@
     <link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.22/themes/smoothness/jquery-ui.css" rel="stylesheet" />
     <link href="css/foundation.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
     <link href="css/shared.css" rel="stylesheet" type="text/css" />
     <link href="css/search.css" rel="stylesheet" type="text/css" />
     <link href="css/slideshow.css" rel="stylesheet" type="text/css" />
@@ -20,141 +21,360 @@
     <script src="//code.jquery.com/jquery-1.8.1.min.js"></script>
     <script src="//code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/foundation.min.js"></script>
-    <script type="text/javascript"  src="js/foundation.reveal.js"></script>
+    <script type="text/javascript" src="js/foundation.reveal.js"></script>
     <script type="text/javascript" src="js/foundation.equalizer.js"></script>
     <script type="text/javascript" src="js/jquery.onscreen.js"></script>
     <script type="text/javascript" src="js/TweenMax.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.core.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"></script>
 
     <!-- CUSTOM FONTS CODE -->
     <link rel="stylesheet" href="https://use.typekit.net/hvo2ghv.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
 
 </head>
+
 <body>
 
-<div class="wrapper homepage"> 
+    <div class="wrapper homepage">
 
-    <!-- ///// HEADER INCLUDE ///// -->
-    <!-- <div w3-include-html="header.html"></div> -->
+        <!-- ///// HEADER INCLUDE ///// -->
+        <!-- <div w3-include-html="header.html"></div> -->
 
-    <section class="header-section" data-sv-header-section>
-        <div class="top-nav-cont">
-            <div class="nav-controls">
-                <div class="controls-inner">
-                    <div class="hamburger">
-                        <div class="nav-bars" id="icon-open">
-                            <div class="nav-bar"></div>
-                            <div class="nav-bar"></div>
-                            <div class="nav-bar"></div>
+        <section class="header-section" data-sv-header-section>
+            <div class="top-nav-cont">
+                <div class="nav-controls">
+                    <div class="controls-inner">
+                        <div class="control-item">
+                            <div class="hamburger">
+                                <div class="nav-bars" id="icon-open">
+                                    <div class="nav-bar"></div>
+                                    <div class="nav-bar"></div>
+                                    <div class="nav-bar"></div>
+                                </div>
+                                <svg id="icon-close" viewBox="0 0 24 24" width="24" height="24">
+                                    <path fill="white" stroke="white" d="M24 1.485L22.515 0 12 10.515 1.485 0 0 1.485 10.515 12 0 22.515 1.485 24 12 13.484 22.515 24 24 22.515 13.484 12z"></path>
+                                </svg>
+                            </div>
+                            <span>Menu</span>
                         </div>
-                        <svg id="icon-close" viewBox="0 0 24 24" width="24" height="24">
-                            <path fill="white" stroke="white" d="M24 1.485L22.515 0 12 10.515 1.485 0 0 1.485 10.515 12 0 22.515 1.485 24 12 13.484 22.515 24 24 22.515 13.484 12z"></path>
-                        </svg>
-                    </div>
-                    <span>Menu</span>
-                </div>
-            </div>
-            <div class="logo">
-                <a href="/"><img src="includes/public/assets/images/main-logo.png" alt="Lets Texas Logo"></a>
-            </div>
-            <div class="header-right">
-                <div class="search-cont" data-toggle-search>
-                    <i class="fas fa-search"></i>
-                </div>
-                <a href="/" class="booking-link">
-                    Book Now
-                </a>
-            </div>
-        </div>
-        <nav class="main-nav">
-            <div class="menu-item item-1" data-direction="bt">
-                <div class="item-inner">
-                    <div class="side-menu">
-                        <ul class="menu-list nav-primary">
-                            <li class="primary-item">
-                                <a href="/">things to do<i class="fas fa-plus"></i></a>
-                            </li>
-                            <li class="primary-item">
-                                <a href="/">places to go<i class="fas fa-plus"></i></a>
-                            </li>
-                            <li class="primary-item">
-                                <a href="/">plan your trip<i class="fas fa-plus"></i></a>
-                            </li>
-                        </ul>
+                        <div class="control-item">
+                            <div class="nav-back" data-menu-back>
+                                <i class="fas fa-angle-left"></i>
+                                <span>Back</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="menu-item item-2" data-direction="lr">
-                <div class="item-inner">
-
+                <div class="logo">
+                    <a href="/"><img src="includes/public/assets/images/main-logo.png" alt="Lets Texas Logo"></a>
+                </div>
+                <div class="header-right">
+                    <div class="search-cont" data-toggle-search>
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <a href="/" class="booking-link">
+                        Book Now
+                    </a>
                 </div>
             </div>
-            <div class="menu-item item-3" data-direction="bt">
-                <div class="item-inner">
-
-                </div>
-            </div>
-            <div class="menu-item item-4" data-direction="rl">
-                <div class="item-inner">
-
-                </div>
-            </div>
-            <div class="menu-item item-5" data-direction="tb">
-                <div class="item-inner">
-                    <div class="social-icons">
-                        <a href="/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                        <a href="/" class="social-icon"><i class="fab fa-twitter"></i></a>
-                        <a href="/" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
-                        <a href="/" class="social-icon"><i class="fab fa-instagram"></i></a>
-                        <a href="/" class="social-icon"><i class="fab fa-youtube"></i></a>
+            <nav class="main-nav">
+                <div class="menu-item item-1">
+                    <div class="border"></div>
+                    <div class="item-inner" data-direction="btlrg">
+                        <div class="side-menu">
+                            <div class="content-wrapper">
+                                <ul class="menu-list nav-primary anim">
+                                    <li class="primary-item">
+                                        <a href="/">things to do<i class="fas fa-plus"></i></a>
+                                    </li>
+                                    <li class="primary-item">
+                                        <a href="/">places to go<i class="fas fa-plus"></i></a>
+                                    </li>
+                                    <li class="primary-item">
+                                        <a href="/">plan your trip<i class="fas fa-plus"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </nav>
-    </section>
-    
-    <script>
-        $(document).ready(function(){
-            var root = $(".header-section");
-            var menuControl = root.find(".nav-controls");
-            var openMenu = root.find("#icon-open");
-            var closeMenu = root.find("#icon-close");
+                <div class="menu-item item-2">
+                    <div class="item-inner" data-direction="lr">
+                        <div class="nav-slide" style="background:url('includes/public/assets/images/nav-bg-sm.png')center/cover no-repeat;">
+                            <div class="content">
+                                <h3>world class resorts</h3>
+                                <p>
+                                    Find yourself relaxing and rejuvenated in some of the best resorts in the world
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item item-3">
+                    <div class="item-inner" data-direction="bt">
+                        <div class="nav-slide" style="background:url('includes/public/assets/images/nav-bg-sm.png')center/cover no-repeat;">
+                            <div class="content">
+                                <h3>world class resorts</h3>
+                                <p>
+                                    Find yourself relaxing and rejuvenated in some of the best resorts in the world
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item item-4">
+                    <div class="item-inner" data-direction="rl">
+                        <div class="nav-slide alternate" style="background:url('includes/public/assets/images/nav-bg-lg.png')center/cover no-repeat;">
+                            <div class="content">
+                                <h3>regional map</h3>
+                                <a href="/" class="link">View More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item item-5">
+                    <div class="border"></div>
+                    <div class="item-inner" data-direction="tb">
+                        <div class="content-wrapper">
+                            <div class="social-icons anim">
+                                <a href="/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                                <a href="/" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                <a href="/" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
+                                <a href="/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                                <a href="/" class="social-icon"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </section>
 
-            menuControl.on("click", function(){
-                $(this).toggleClass("active");
-                if($(this).hasClass("active")){
-                    var tl = new TimelineMax();
-                    tl.to(openMenu, 0.6, {
-                        opacity: 0,
-                        ease: Quint.easeOut
-                    }, 0).
-                    to(closeMenu, 0.6, {
-                        opacity: 1,
-                        rotation: 180,
-                        ease: Quint.easeOut
-                    }, 0);
+        <script>
+            $(document).ready(function () {
+                var root = $(".header-section");
+                var menuControl = root.find(".nav-controls");
+                var openMenu = root.find("#icon-open");
+                var closeMenu = root.find("#icon-close");
+                var menuItems = root.find(".main-nav .menu-item .item-inner");
+
+                function init() {
+                    menuItems.each(function () {
+                        if ($(this).attr("data-direction") === "btlrg") {
+                            var tl = new TimelineMax();
+                            var t = $(this);
+                            var b = t.parent().find(".border");
+                            var l = t.find(".menu-list");
+                            tl.set(t, { yPercent: 100 }).
+                                set(l, { yPercent: 100, xPercent: -50 }).
+                                set(b, { xPercent: -101 });
+                        }
+                        if ($(this).attr("data-direction") === "lr") {
+                            var tl = new TimelineMax();
+                            var t = $(this);
+                            var s = t.find(".nav-slide");
+                            tl.set(t, { xPercent: -101 }).
+                                set(s, { xPercent: 101 })
+                        }
+                        if ($(this).attr("data-direction") === "bt") {
+                            var tl = new TimelineMax();
+                            var t = $(this);
+                            var s = t.find(".nav-slide");
+                            tl.set(t, { yPercent: -101 }).
+                                set(s, { yPercent: 101 });
+                        }
+                        if ($(this).attr("data-direction") === "rl") {
+                            var tl = new TimelineMax();
+                            var t = $(this);
+                            var s = t.find(".nav-slide");
+                            tl.set(t, { xPercent: -101 }).
+                                set(s, { xPercent: 101 });
+                        }
+                        if ($(this).attr("data-direction") === "tb") {
+                            var tl = new TimelineMax();
+                            var t = $(this);
+                            var i = t.find(".social-icons");
+                            var b = t.parent().find(".border");
+                            tl.set(t, { yPercent: 101 }).
+                                set(i, { yPercent: 100 }).
+                                set(b, { xPercent: 101 });
+                        }
+                    });
                 }
-                if(!$(this).hasClass("active")){
-                    var tl = new TimelineMax();
-                    tl.to(openMenu, 0.3, {
-                        opacity: 1,
-                        ease: Quad.easeOut
-                    }, 0.3).
-                    set(closeMenu, {rotation: 0}). 
-                    to(closeMenu, 0.6, {
-                        opacity: 0,
-                        rotation: 270,
-                        ease: Quart.easeInOut
-                    }, 0);
+
+                init();
+
+                function reInit() {
+                    menuItems.each(function () {
+                        if ($(this).attr("data-direction") === "btlrg") {
+                            var tl = new TimelineMax();
+                            var t = $(this);
+                            var b = t.parent().find(".border");
+                            var l = t.find(".menu-list");
+                            tl.set(t, { yPercent: 0 }).
+                                set(l, { yPercent: 0, xPercent: -50 }).
+                                set(b, { xPercent: 0 });
+                        }
+                        if ($(this).attr("data-direction") === "lr") {
+                            var tl = new TimelineMax();
+                            var t = $(this);
+                            var s = t.find(".nav-slide");
+                            tl.set(t, { xPercent: 0 }).
+                                set(s, { xPercent: 0 });
+                        }
+                        if ($(this).attr("data-direction") === "bt") {
+                            var tl = new TimelineMax();
+                            var t = $(this);
+                            var s = t.find(".nav-slide");
+                            tl.set(t, { yPercent: 0 }).
+                                set(s, { yPercent: 0 });
+                        }
+                        if ($(this).attr("data-direction") === "rl") {
+                            var tl = new TimelineMax();
+                            var t = $(this);
+                            var s = t.find(".nav-slide");
+                            tl.set(t, { xPercent: 0 }).
+                                set(s, { xPercent: 0 });
+                        }
+                        if ($(this).attr("data-direction") === "tb") {
+                            var tl = new TimelineMax();
+                            var t = $(this);
+                            var i = t.find(".social-icons");
+                            var b = t.parent().find(".border");
+                            tl.set(t, { yPercent: 0 }).
+                                set(i, { yPercent: -50 }).
+                                set(b, { xPercent: 0 });
+                        }
+                    });
                 }
+
+                function animateMenu() {
+                    $(this).toggleClass("active");
+                    if ($(this).hasClass("active")) {
+                        var tl = new TimelineMax();
+                        tl.to(openMenu, 0.6, {
+                            opacity: 0,
+                            ease: Quint.easeOut
+                        }, 0).
+                            to(closeMenu, 0.6, {
+                                opacity: 1,
+                                rotation: 180,
+                                ease: Quint.easeOut
+                            }, 0).
+                            add(function () {
+                                menuItems.each(function () {
+                                    if ($(this).attr("data-direction") === "btlrg") {
+                                        var tl = new TimelineMax();
+                                        var t = $(this);
+                                        var b = t.parent().find(".border");
+                                        var l = t.find(".menu-list");
+                                        tl.to(t, 0.9, { yPercent: 0, ease: Quint.easeOut }).
+                                            to(l, 0.4, { opacity: 1, yPercent: 0 }, 0.5).
+                                            to(b, 0.4, { xPercent: 0 }, 0.5);
+                                    }
+                                    if ($(this).attr("data-direction") === "lr") {
+                                        var tl = new TimelineMax();
+                                        var t = $(this);
+                                        var s = t.find(".nav-slide");
+                                        tl.to(t, 0.9, { xPercent: 0, ease: Quint.easeOut }).
+                                            to(s, 0.9, { xPercent: -0, ease: Quint.easeOut }, 0);
+                                    }
+                                    if ($(this).attr("data-direction") === "bt") {
+                                        var tl = new TimelineMax();
+                                        var t = $(this);
+                                        var s = t.find(".nav-slide");
+                                        tl.to(t, 0.9, { yPercent: 0, ease: Quint.easeOut }).
+                                            to(s, 0.9, { yPercent: 0, ease: Quint.easeOut }, 0);
+                                    }
+                                    if ($(this).attr("data-direction") === "rl") {
+                                        var tl = new TimelineMax();
+                                        var t = $(this);
+                                        var s = t.find(".nav-slide");
+                                        tl.to(t, 0.9, { xPercent: 0, ease: Quint.easeOut }).
+                                            to(s, 0.9, { xPercent: 0, ease: Quint.easeOut }, 0);
+                                    }
+                                    if ($(this).attr("data-direction") === "tb") {
+                                        var tl = new TimelineMax();
+                                        var t = $(this);
+                                        var i = t.find(".social-icons");
+                                        var b = t.parent().find(".border");
+                                        tl.to(t, 0.9, { yPercent: 0, ease: Quint.easeOut }).
+                                            to(i, 0.5, { yPercent: -75, ease: Quint.easeOut }).
+                                            to(b, 0.4, { xPercent: 0 }, 0.7);
+                                    }
+                                });
+                            }, 0);
+                    }
+                    if (!$(this).hasClass("active")) {
+                        var tl = new TimelineMax();
+                        tl.to(openMenu, 0.3, {
+                            opacity: 1,
+                            ease: Quad.easeOut
+                        }, 0.3).
+                            set(closeMenu, { rotation: 0 }).
+                            to(closeMenu, 0.6, {
+                                opacity: 0,
+                                rotation: 270,
+                                ease: Quart.easeInOut
+                            }, 0).
+                            add(function () {
+                                menuItems.each(function () {
+                                    if ($(this).attr("data-direction") === "btlrg") {
+                                        var tl = new TimelineMax();
+                                        var t = $(this);
+                                        var b = t.parent().find(".border");
+                                        var l = t.find(".menu-list");
+                                        tl.to(t, 0.6, { yPercent: 101, ease: Quart.easeInOut }).
+                                            to(l, 0.4, { opacity: 0, yPercent: 100 }, 0).
+                                            to(b, 0.3, { xPercent: -101 }, 0);
+                                    }
+                                    if ($(this).attr("data-direction") === "lr") {
+                                        var tl = new TimelineMax();
+                                        var t = $(this);
+                                        var s = t.find(".nav-slide");
+                                        tl.to(t, 0.6, { xPercent: -101, ease: Quart.easeInOut }).
+                                            to(s, 0.6, { xPercent: 101, ease: Quart.easeInOut }, 0);
+                                    }
+                                    if ($(this).attr("data-direction") === "bt") {
+                                        var tl = new TimelineMax();
+                                        var t = $(this);
+                                        var s = t.find(".nav-slide");
+                                        tl.to(t, 0.6, { yPercent: 101, ease: Quart.easeInOut }).
+                                            to(s, 0.9, { yPercent: -101, ease: Quart.easeInOut }, 0);
+                                    }
+                                    if ($(this).attr("data-direction") === "rl") {
+                                        var tl = new TimelineMax();
+                                        var t = $(this);
+                                        var s = t.find(".nav-slide");
+                                        tl.to(t, 0.6, { xPercent: 101, ease: Quart.easeInOut }).
+                                            to(s, 0.9, { xPercent: -101, ease: Quart.easeInOut }, 0);
+                                    }
+                                    if ($(this).attr("data-direction") === "tb") {
+                                        var tl = new TimelineMax();
+                                        var t = $(this);
+                                        var i = t.find(".social-icons");
+                                        var b = t.parent().find(".border");
+                                        tl.to(t, 0.4, { yPercent: -101, ease: Quart.easeInOut }, 0.2).
+                                            to(i, 0.5, { yPercent: 100, ease: Quart.easeInOut }, 0)
+                                        to(b, 0.3, { xPercent: 101 }, 0);
+                                    }
+                                });
+                            }, 0);
+                    }
+                }
+
+                menuControl.on("click", animateMenu);
+
+                $(window).on("resize orientationchange", _.debounce(function () {
+                    reInit();
+                }, 200));
             });
-        });
-    </script>
+        </script>
 
-    <!-- //////  HEADER  SLIDESHOW //////// -->
+        <!-- //////  HEADER  SLIDESHOW //////// -->
 
-    <!-- <section class="header-slideshow">
+        <!-- <section class="header-slideshow">
         <div class="home-header">
             <div class="item">
                 <img src="includes/public/assets/images/header-slideshow1.jpg" />
@@ -187,27 +407,28 @@
         });
     </script>    -->
 
-    <!-- //////  BODY  //////// -->
-    <section class="body-section">
-        <div class="maincont">        
-             
-        </div>
-    </section>
+        <!-- //////  BODY  //////// -->
+        <section class="body-section">
+            <div class="maincont">
 
-    <!-- /////  FOOTER INCLUDE  ////// -->
-    <div w3-include-html="footer.html"></div>
+            </div>
+        </section>
 
-</div>
+        <!-- /////  FOOTER INCLUDE  ////// -->
+        <div w3-include-html="footer.html"></div>
 
-<!-- !!!!!!!!!!!! DO NOT USE THIS FILE FOR SHELL SETUP !!!!!!!!!!!! -->
-<script type="text/javascript" src="js/w3.js"></script>
-<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    </div>
 
-<script type="text/javascript" src="js/nav.js"></script>
+    <!-- !!!!!!!!!!!! DO NOT USE THIS FILE FOR SHELL SETUP !!!!!!!!!!!! -->
+    <script type="text/javascript" src="js/w3.js"></script>
+    <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
-<script type="text/javascript">
-    
-</script>
+    <script type="text/javascript" src="js/nav.js"></script>
+
+    <script type="text/javascript">
+
+    </script>
 
 </body>
+
 </html>

@@ -5,6 +5,10 @@
 |-----------------------------------------------------------------------------------------------------------
 */
 
+.nav-controls {
+    cursor: pointer;
+}
+
 .main-nav {
     width: 100%;
     height: 100vh;
@@ -19,11 +23,13 @@
     grid-template-rows: 50% 25% 25%;
     -ms-grid-rows: 50% 25% 25%;
     z-index: 998;
-    pointer-events: none;
 }
 
 .main-nav .menu-item {
     position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 
 .main-nav .item-1 {
@@ -36,11 +42,19 @@
 }
 
 .main-nav .item-1 .item-inner {
+    border-right: 8px solid white;
+    border-left: 4px solid white;
+    border-bottom: 4px solid white;
+}
+
+.main-nav .item-1 .border {
+    position: absolute;
+    top: 0;
     left: 0;
-    bottom: 0;
     width: 100%;
-    height: 0%;
-    transition: height 0.6s;
+    height: 4px;
+    background-color: white;
+    z-index: 1;
 }
 
 .main-nav .item-2 {
@@ -52,6 +66,11 @@
     -ms-grid-column-span: 1;
 }
 
+.main-nav .item-2 .item-inner {
+    border: 4px solid white;
+    border-left: 0;
+}
+
 .main-nav .item-3 {
     grid-row: 2/4;
     -ms-grid-row: 2;
@@ -59,6 +78,11 @@
     grid-column: 2/3;
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
+}
+
+.main-nav .item-3 .item-inner {
+    border: 4px solid white;
+    border-left: 0;
 }
 
 .main-nav .item-4 {
@@ -70,13 +94,62 @@
     -ms-grid-column-span: 1;
 }
 
+.main-nav .item-4 .item-inner {
+    border: 4px solid white;
+    border-bottom: 8px solid white;
+}
+
 .main-nav .item-5 {
+    position: relative;
     grid-row: 3/4;
     -ms-grid-row: 3;
     -ms-grid-row-span: 1;
     grid-column: 3/4;
     -ms-grid-column: 3;
     -ms-grid-column-span: 1;
+}
+
+.main-nav .item-5 .border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    z-index: 1;
+}
+
+.main-nav .item-5 .item-inner {
+    border: 4px solid white;
+    border-bottom: 0;
+    border-top: 0;
+    position: relative;
+}
+
+.main-nav .item-5 .item-inner .content-wrapper {
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 63%;
+    overflow: hidden;
+}
+
+@media (max-width: 1300px) {
+    .main-nav .item-5 .item-inner .content-wrapper {
+        height: 70%;
+    }
+}
+
+.main-nav .item-1 .item-inner .content-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65%;
+    overflow: hidden;
 }
 
 .main-nav ul {
@@ -92,32 +165,44 @@
     pointer-events: all;
 }
 
-.main-nav .menu-item .item-inner {
+.main-nav .side-menu .menu-list {
     position: absolute;
-    overflow: hidden;
+    bottom: 0;
+    left: 50%;
+    width: 60%;
+    opacity: 0;
+}
+
+.main-nav .menu-item .item-inner {
     background-color: #202f66;
-    border: 4px solid #f9f8f2;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .main-nav .menu-item .side-menu {
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     pointer-events: all;
 }
 
 .nav-primary .primary-item {
     margin-bottom: 25px;
+    text-align: center;
 }
 
 .nav-primary .primary-item a {
     display: flex;
     align-items: center;
     font-family: trade-gothic-next-condensed, sans-serif;
-    font-size: 46px;
-    line-height: 50px;
+    font-size: calc(32px + (46 - 32) * ((100vw - 1025px) / (1665 - 1025)));
+    line-height: calc(38px + (50 - 38) * ((100vw - 1025px) / (1665 - 1025)));
     color: white;
     text-transform: uppercase;
 }
@@ -126,6 +211,51 @@
     font-size: 30px;
     margin-left: 15px;
     color: #a3c8e3;
+}
+
+.main-nav .nav-slide {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.main-nav .nav-slide .content {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    width: 90%;
+    max-width: 300px;
+}
+
+.main-nav .nav-slide.alternate .content {
+    bottom: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.main-nav .nav-slide.alternate .content .link {
+    display: inline-block;
+    padding: 3px 13px;
+    color: white;
+    font-size: 13px;
+    border-radius: 25px;
+    border: 2px solid white;
+    margin-top: 12px;
+}
+
+.main-nav .nav-slide .content h3 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 29px;
+    line-height: 34px;
+    margin-bottom: 0;
+}
+
+.main-nav .nav-slide .content p {
+    color: white;
+    margin: 0;
 }
 
 /*

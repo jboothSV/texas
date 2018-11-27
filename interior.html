@@ -7,16 +7,18 @@
     <link rel="icon" href="/includes/public/assets/images/favicon.ico" type="image/x-icon" />
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.22/themes/smoothness/jquery-ui.css" rel="stylesheet" />
     <link href="css/foundation.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="css/font-awesome.css">
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.8/slick.css"/>
-    <link href="css/shared.css" rel="stylesheet" type="text/css" />
     <link href="css/search.css" rel="stylesheet" type="text/css" />
     <link href="css/slideshow-int.css" rel="stylesheet" type="text/css" />
-    <link href="css/collections.css" rel="stylesheet" type="text/css" />
     <link href="css/nav-shared.css" rel="stylesheet" type="text/css" />
     <link href="css/social.css" rel="stylesheet" type="text/css" />
     <link href="css/shared-form.css" rel="stylesheet" type="text/css" />
     <link href="css/add-this.css" rel="stylesheet" type="text/css" />
+    <link href="css/shared.css" rel="stylesheet" type="text/css" />
+    <link href="css/footer.css" rel="stylesheet" type="text/css" />
+    <link href="css/vguide-enews.css" rel="stylesheet" type="text/css" />
+    <link href="css/collections.css" rel="stylesheet" type="text/css" />
 
     <script src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
     <script src="//code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
@@ -28,8 +30,6 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.8/slick.min.js"></script>
 
     <!-- CUSTOM FONTS CODE -->
-    <link rel="stylesheet" href="https://use.typekit.net/hvo2ghv.css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
 
 </head>
 
@@ -37,22 +37,72 @@
     <div class="wrapper">
 
     <!-- ///// HEADER INCLUDE ///// -->
-    <div w3-include-html="header.html"></div>
+    <!-- <div w3-include-html="header.html"></div> -->
 
     <!-- ////// HEADER SLIDESHOW //////// -->
     <section class="header-slideshow-int">
-        <div class="imgcont">
-            <img src="includes/public/assets/images/interior-header.jpg" />
-        </div>      
+        <div class="item">
+            <div class="img-cont">
+                <a href="/">
+                    <picture>
+                        <source srcset="includes/public/assets/images/content-hdr-sm.jpg" media="(max-width:640px)">
+                        <img src="includes/public/assets/images/content-hdr.jpg" alt=""/>
+                    </picture>
+                </a>
+            </div>
+            <div class="title">Tex-Mex Galore in South Texas</div>
+			<div class="credit">By First Name Last Name</div>
+
+        </div>
     </section>
 
     <!-- //////  BODY  //////// -->
     <section class="body-section">
         <div class="maincont">
-            
+            <div class="textbox">
+                <p> All over the world, people enjoy Tex-Mex, but in the Lone Star State, this cuisine is king. Texans with Mexican roots created the delicious hybrid, so it's no surprise that the most memorable (and authentic) plates hit tables close to the border. From tasty tacos to grilled steaks and cheese-filled tamales, South Texas Tex-Mex will leave you feeling full and happy.</p>
+
+                <p>Texans take great pride in Tex-Mex cuisine. We're loyal to specific locales, restaurants, and Tex-Mex plates, debating our favorites as fervently as we discuss college football.</p>
+
+                <p>A San Antonio native, I grew up speaking Spanish alongside English and distinctly recall begging for Tex-Mex at every meal. If my parents hadn't stood in the way, I would have subsisted entirely on refried beans, Mexican rice, and cheese enchiladas smothered in beef gravy. Like many San Antonians, we had weekly family dinners at our neighborhood Tex-Mex restaurant. There, I invariably ordered enchiladas, rice, and beans, often in Spanish. And every Christmas night, we dug into homemade tamales gifted to the family during the holidays.</p>
+
+                <p>As I got older, my tastes and my geography broadened. I took my first trip to Mexico City, which helped me appreciate the difference between authentic Mexican cuisine and its north-of-the-border cousin. The more authentic meals tend to revolve around proteins, at least at dinnertime, and lack the gooey cheese Tex-Mex offerings often incorporate. I fell in love with chilaquiles for breakfast but missed chips and queso—my appetizer of choice—whenever we sat down to dinner.</p>
+            </div>
+
+            <div class="pull-quote">
+                <p>
+                    <q>If my parents hadn't stood in the way, I would have subsisted entirely on refried beans, Mexican rice, and cheese enchiladas smothered in beef gravy.</q>
+                </p>
+            </div>
+
+            <div class="textbox">
+                <p>A few years later, while visiting Laredo, I sampled the best soft tacos of my life at the original Taco Palenque. I love the popular Pirata taco—a flour tortilla stuffed with beef fajita meat, refried beans, and half-melted cheddar cheese—but breakfast calls for chorizo and egg.</p>
+
+                <p>As Taco Palenque opened additional restaurants across South Texas, its founder, Mexican-born Don Pancho, decided to launch a fine-dining eatery: Palenque Grill. If it's Tex-Mex you're craving, order beef fajitas. For a more authentic Mexican version, cut into the arrachera skirt steak; and be sure to save room for flan! Like its casual sibling, Palenque Grill has also expanded beyond Laredo. Palenque enthusiasts can now enjoy sit-down meals in McAllen and San Antonio.</p>
+
+                <p>But Laredo's Tex-Mex buck doesn't stop with Don Pancho's offerings. If you're visiting downtown Laredo, consider popping into El Meson de St. Agustin—a lunch-only hole-in-the-wall next door to San Agustin Cathedral and Plaza. All ingredients are fresh, and all menu items are prepared in-house. For special occasions, book a table at the Zaragoza Grill located in Laredo's historic La Posada Hotel. I ordered the queso fresco tenderloin, which comes with cilantro rice, bacon-wrapped asparagus, and chile guajillo butter. If you happen to be in Laredo in the middle of the week, check out the grill's Mexican lunch buffet—a weekly Wednesday event that brings in throngs of hungry locals.</p>
+            </div>
+
+            <div class="imagebox-caption">
+                <figure>
+                    <img src="includes/public/assets/images/nachos.jpg" alt=""/>
+                    <figcaption><span>Fun Fact: </span>Nachos came about when a hotel maître-de in Piedras Negras, Mexico served a quick and easy snack—tortilla triangles loaded with cheese and jalapenos—to military housewives who were hungry after the hotel kitchen had already closed.</figcaption>
+                </figure>
+            </div>
+
+            <div class="textbox">
+                <p>McAllen—often called the City of Palms for its subtropical climate and proliferation of palm trees—also boasts delicious Tex-Mex. You've got Delia's Tamales and Frida's Grill & Cantina, as well as the Laredo-born Palenques.</p>
+
+                <p>Although you often see them on Tex-Mex menus, tamales are not modern Tejano creations. In fact, tamales may have been consumed as early as 7000 B.C. Because they can be made in advance and stored for long stretches of time, tamales became essential for early Latin American communities—particularly those on the move or immersed in war.</p>
+
+                <p>Delia's story is humble but far less dramatic. When she needed help providing for her family, she and her sister began making tamales and selling them in the community—often by knocking on the doors of local businesses and residences. Her tamales earned loyal fans, and Delia eventually launched her first restaurant in south McAllen. She now runs a sizeable operation that includes locations in Pharr, Edinburg, Mission, and San Juan.</p>
+
+                <p>If you're looking for a broader Tex-Mex menu (or a fun night out!), head to Frida's. Frida's serves award-winning margaritas—people go crazy for the “Mango Chamoy Fridarita”—which will get you ready for dancing to live music on the outdoor patio (Friday and Saturday evenings). With steaks, sopes, and queso fundido, Frida's menu has something for everyone. Fajitas and table-made guac will make you feel right at home.</p>
+            </div>
+
         </div><!--maincont-->
     </section>
-    
+
     <!-- /////  FOOTER INCLUDE  ////// -->
     <div w3-include-html="footer.html"></div>
 

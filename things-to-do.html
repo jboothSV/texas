@@ -1,152 +1,440 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Simpleville CVB Cutup</title>
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="/includes/public/assets/images/favicon.ico" type="image/x-icon" />
-    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.22/themes/smoothness/jquery-ui.css" rel="stylesheet" />
-    <link href="css/foundation.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.8/slick.css"/>
-    <link href="css/shared.css" rel="stylesheet" type="text/css" />
-    <link href="css/search.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/includes/public/assets/images/favicon.ico" type="image/x-icon">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.22/themes/smoothness/jquery-ui.css" rel="stylesheet">
+    <link href="css/foundation.min.css" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.8/slick.css">
+    <link href="css/shared.css" rel="stylesheet" type="text/css">
+    <link href="css/collections.css" rel="stylesheet" type="text/css">
+    <link href="css/search.css" rel="stylesheet" type="text/css">
     <link href="css/slideshow-int.css" rel="stylesheet" type="text/css" />
-    <link href="css/collections.css" rel="stylesheet" type="text/css" />
     <link href="css/nav-shared.css" rel="stylesheet" type="text/css" />
     <link href="css/social.css" rel="stylesheet" type="text/css" />
     <link href="css/shared-form.css" rel="stylesheet" type="text/css" />
     <link href="css/add-this.css" rel="stylesheet" type="text/css" />
+    <link href="css/custom_layout-pro.css" rel="stylesheet" type="text/css">
+    <link href="css/footer.css" rel="stylesheet" type="text/css">
 
     <script src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
     <script src="//code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/foundation.min.js"></script>
-    <script type="text/javascript"  src="js/foundation.reveal.js"></script>
+    <script type="text/javascript" src="js/foundation.reveal.js"></script>
     <script type="text/javascript" src="js/foundation.equalizer.js"></script>
     <script type="text/javascript" src="js/jquery.onscreen.js"></script>
-
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.8/slick.min.js"></script>
 
-    <!-- CUSTOM FONTS CODE -->
-    <link rel="stylesheet" href="https://use.typekit.net/hvo2ghv.css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
+    <!-- CUSTOM FONTS CODE -->
 </head>
 
 <body>
     <div class="wrapper">
 
-    <!-- ///// HEADER INCLUDE ///// -->
-    <div w3-include-html="header.html"></div>
+        <!-- ///// HEADER INCLUDE ///// -->
+        <!-- <div w3-include-html="header.html"></div> -->
 
-    <!-- ////// HEADER SLIDESHOW //////// -->
-    <section class="header-slideshow-int">
-        <div class="img-cont">
-            <picture>
-                <source srcset="includes/public/assets/images/int-slider-sm.png" media="(max-width:640px)">
-                <img src="includes/public/assets/images/int-slider-lg.png" />
-            </picture>
-        </div> 
-        <div class="content">
-            <h2>things to do</h2>
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            </p>
-        </div>     
-    </section>
+        <!-- ////// HEADER SLIDESHOW //////// -->
+        <section class="header-slideshow-int">
+            <div class="item">
+                <a href="/">
+                    <div class="img-cont">
+                        <picture>
+                            <source srcset="includes/public/assets/images/listings-hdr-sm.jpg" media="(max-width: 640px)">
+                            <img src="includes/public/assets/images/listings-hdr.jpg" alt="">
+                        </picture>
+                    </div>
+                </a>
+            </div>
+        </section>
 
-    <!-- //////  BODY  //////// -->
-    <section class="body-section">
-        <div class="maincont">
-            <div class="highlight-panel">
-                <div class="inner-panel">
-                    <div class="highlight">
-                        <div class="img-cont" style="background:url('includes/public/assets/images/highlight.png')center/cover no-repeat;"></div>
-                        <div class="title">
-                            <h4>sports</h4>
-                        </div>
+        <!-- //////  BODY  //////// -->
+        <section class="body-section">
+            <div class="maincont">
+
+                <div class="imagebox-grid">
+                    <div class="slide">
+                        <a href="#">
+                            <div class="img-cont" style="background:url('includes/public/assets/images/highlight.jpg')center/cover no-repeat;"></div>
+                            <div class="title">
+                                <h4>Arts & Culture</h4>
+                            </div>
+                        </a>
                     </div>
-                    <div class="highlight">
-                        <div class="img-cont" style="background:url('includes/public/assets/images/highlight.png')center/cover no-repeat;"></div>
-                        <div class="title">
-                            <h4>sports</h4>
-                        </div>
+                    <div class="slide">
+                        <a href="#">
+                            <div class="img-cont" style="background:url('includes/public/assets/images/highlight.jpg')center/cover no-repeat;"></div>
+                            <div class="title">
+                                <h4>Arts & Culture</h4>
+                            </div>
+                        </a>
                     </div>
-                    <div class="highlight">
-                        <div class="img-cont" style="background:url('includes/public/assets/images/highlight.png')center/cover no-repeat;"></div>
-                        <div class="title">
-                            <h4>sports</h4>
-                        </div>
+                    <div class="slide">
+                        <a href="#">
+                            <div class="img-cont" style="background:url('includes/public/assets/images/highlight.jpg')center/cover no-repeat;"></div>
+                            <div class="title">
+                                <h4>Arts & Culture</h4>
+                            </div>
+                        </a>
                     </div>
-                    <div class="highlight">
-                        <div class="img-cont" style="background:url('includes/public/assets/images/highlight.png')center/cover no-repeat;"></div>
-                        <div class="title">
-                            <h4>sports</h4>
-                        </div>
+                    <div class="slide">
+                        <a href="#">
+                            <div class="img-cont" style="background:url('includes/public/assets/images/highlight.jpg')center/cover no-repeat;"></div>
+                            <div class="title">
+                                <h4>Arts & Culture</h4>
+                            </div>
+                        </a>
                     </div>
-                    <div class="highlight">
-                        <div class="img-cont" style="background:url('includes/public/assets/images/highlight.png')center/cover no-repeat;"></div>
-                        <div class="title">
-                            <h4>sports</h4>
-                        </div>
+                    <div class="slide">
+                        <a href="#">
+                            <div class="img-cont" style="background:url('includes/public/assets/images/highlight.jpg')center/cover no-repeat;"></div>
+                            <div class="title">
+                                <h4>Arts & Culture</h4>
+                            </div>
+                        </a>
                     </div>
-                    <div class="highlight">
-                        <div class="img-cont" style="background:url('includes/public/assets/images/highlight.png')center/cover no-repeat;"></div>
-                        <div class="title">
-                            <h4>sports</h4>
-                        </div>
+                    <div class="slide">
+                        <a href="#">
+                            <div class="img-cont" style="background:url('includes/public/assets/images/highlight.jpg')center/cover no-repeat;"></div>
+                            <div class="title">
+                                <h4>Arts & Culture</h4>
+                            </div>
+                        </a>
                     </div>
-                    <div class="highlight">
-                        <div class="img-cont" style="background:url('includes/public/assets/images/highlight.png')center/cover no-repeat;"></div>
-                        <div class="title">
-                            <h4>sports</h4>
-                        </div>
+                    <div class="slide">
+                        <a href="#">
+                            <div class="img-cont" style="background:url('includes/public/assets/images/highlight.jpg')center/cover no-repeat;"></div>
+                            <div class="title">
+                                <h4>Arts & Culture</h4>
+                            </div>
+                        </a>
                     </div>
-                    <div class="highlight">
-                        <div class="img-cont" style="background:url('includes/public/assets/images/highlight.png')center/cover no-repeat;"></div>
-                        <div class="title">
-                            <h4>ranches &amp; rodeos</h4>
-                        </div>
+                    <div class="slide">
+                        <a href="#">
+                            <div class="img-cont" style="background:url('includes/public/assets/images/highlight.jpg')center/cover no-repeat;"></div>
+                            <div class="title">
+                                <h4>Arts & Culture</h4>
+                            </div>
+                        </a>
                     </div>
-                    <div class="highlight">
-                        <div class="img-cont" style="background:url('includes/public/assets/images/highlight.png')center/cover no-repeat;"></div>
-                        <div class="title">
-                            <h4>sports</h4>
-                        </div>
+                    <div class="slide">
+                        <a href="#">
+                            <div class="img-cont" style="background:url('includes/public/assets/images/highlight.jpg')center/cover no-repeat;"></div>
+                            <div class="title">
+                                <h4>Arts & Culture</h4>
+                            </div>
+                        </a>
                     </div>
-                    <div class="highlight">
-                        <div class="img-cont" style="background:url('includes/public/assets/images/highlight.png')center/cover no-repeat;"></div>
-                        <div class="title">
-                            <h4>sports</h4>
-                        </div>
+                    <div class="slide">
+                        <a href="#">
+                            <div class="img-cont" style="background:url('includes/public/assets/images/highlight.jpg')center/cover no-repeat;"></div>
+                            <div class="title">
+                                <h4>Arts & Culture</h4>
+                            </div>
+                        </a>
                     </div>
-                    <div class="highlight">
-                        <div class="img-cont" style="background:url('includes/public/assets/images/highlight.png')center/cover no-repeat;"></div>
-                        <div class="title">
-                            <h4>sports</h4>
-                        </div>
+                    <div class="slide">
+                        <a href="#">
+                            <div class="img-cont" style="background:url('includes/public/assets/images/highlight.jpg')center/cover no-repeat;"></div>
+                            <div class="title">
+                                <h4>Arts & Culture</h4>
+                            </div>
+                        </a>
                     </div>
-                    <div class="highlight">
-                        <div class="img-cont" style="background:url('includes/public/assets/images/highlight.png')center/cover no-repeat;"></div>
-                        <div class="title">
-                            <h4>sports</h4>
+                    <div class="slide">
+                        <a href="#">
+                            <div class="img-cont" style="background:url('includes/public/assets/images/highlight.jpg')center/cover no-repeat;"></div>
+                            <div class="title">
+                                <h4>Arts & Culture</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div> <!--end highlights -->
+
+                <div class="panel-two-col controlled-width">
+                    <div class="row">
+                        <div class="small-12 medium-6 columns ">
+
+                            <div class="imagebox">
+                                <div class="slide">
+                                    <!-- <a href="/"> -->
+                                        <div class="slide-img">
+                                            <img src="includes/public/assets/images/imagebox.jpg" alt="">
+                                        </div>
+                                    <!-- </a> -->
+                                    <div class="content">
+                                        <a href="/">
+                                            <h2 class="title">Cadillac Ranch in Amarillo</h2>
+                                        </a>
+                                        <div class="desc">A "bumper crop" of 10 Cadillacs are buried nose down in a field at the same angle as Cheops' pyramids. Represents the Golden Age of Automobiles from 1949 through 1963.
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>  <!--end imagebox -->
+
+                        </div>
+
+                        <div class="small-12 medium-6 columns">
+
+                            <div class="splight">
+                                <div class="slide">
+                                    <a href="/">
+                                        <div class="slide-img">
+                                            <img src="includes/public/assets/images/spotlight.jpg" alt="">
+                                        </div>
+                                    </a>
+                                    <div class="content">
+                                        <a href="/">
+                                            <h3 class="title">Kayaking the Texas Coast</h3>
+                                        </a>
+                                        <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <a href="/">
+                                        <div class="slide-img">
+                                            <img src="includes/public/assets/images/spotlight.jpg" alt="">
+                                        </div>
+                                    </a>
+                                    <div class="content">
+                                        <a href="/">
+                                            <h3 class="title">Camping at Texas Beaches</h3>
+                                        </a>
+                                        <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <a href="/">
+                                        <div class="slide-img">
+                                            <img src="includes/public/assets/images/spotlight.jpg" alt="">
+                                        </div>
+                                    </a>
+                                    <div class="content">
+                                        <a href="/">
+                                            <h3 class="title">Kitesurfing the Texas Coast</h3>
+                                        </a>
+                                        <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> <!--end spotlight -->
+
                         </div>
                     </div>
                 </div>
-            </div>
-        </div><!--maincont-->
-    </section>
-    
-    <!-- /////  FOOTER INCLUDE  ////// -->
-    <div w3-include-html="footer.html"></div>
 
-</div>
+                <div class="tiles">
+                    <div class="slide">
+                        <div class="slide-img">
+                            <a href="/">
+                                <img src="includes/public/assets/images/tile.jpg" alt="">
+                            </a>
+                        </div>
 
-<!-- !!!!!!!!!!!! DO NOT USE THIS FILE FOR SHELL SETUP !!!!!!!!!!!! -->
-<script type="text/javascript" src="js/w3.js"></script>
-<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                        <div class="content">
+                            <a href="/">
+                                <h3 class="title">Luckenbach Traditional Country Dance Hall</h3>
+                            </a>
+                            <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-img">
+                            <a href="/">
+                                <img src="includes/public/assets/images/tile.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="content">
+                            <a href="/">
+                                <h3 class="title">Explore the Lakes and Rivers via Canoe</h3>
+                            </a>
+                            <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-img">
+                            <a href="/">
+                                <img src="includes/public/assets/images/tile.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="content">
+                            <a href="/">
+                                <h3 class="title">Boots Just for You That Will Last A Lifetime</h3>
+                            </a>
+                            <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-img">
+                            <a href="/">
+                                <img src="includes/public/assets/images/tile.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="content">
+                            <a href="/">
+                                <h3 class="title">Tex Mex isn't Fusion it's A Cuisine all its Own</h3>
+                            </a>
+                            <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                            </div>
+                        </div>
+                    </div>
+                </div> <!--end tiles -->
 
-<script type="text/javascript" src="js/nav.js"></script>
+                <div class="hlights">
+                    <div class="slide">
+                        <a href="/">
+                            <div class="img-cont" style="background:url('includes/public/assets/images/to-do.png')center/cover no-repeat;"></div>
+                            <div class="overlay"></div>
+                        </a>
+                        <div class="content">
+                            <a href="/">
+                                <div class="title">Things to Do in the Panhandle Plains</div>
+                            </a>
+                            <div class="desc-cont">
+                                <div class="highlight-bar"></div>
+                                <div class="desc">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+                                </div>
+                                <div class="desc-desktop">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <a href="/">
+                            <div class="img-cont" style="background:url('includes/public/assets/images/to-do.png')center/cover no-repeat;"></div>
+                            <div class="overlay"></div>
+                        </a>
+                        <div class="content">
+                            <a href="/">
+                                <div class="title">Hidden Eats in the Panhandle Plains</div>
+                            </a>
+                            <div class="desc-cont">
+                                <div class="highlight-bar"></div>
+                                <div class="desc">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+                                </div>
+                                <div class="desc-desktop">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!--end highlights -->
+
+                <div class="featured-grid">
+                    <div class="slide one">
+                        <div class="slide-img">
+                            <a href="/">
+                                <img src="includes/public/assets/images/featured-grid.png" alt="">
+                            </a>
+                        </div>
+                        <div class="content">
+                            <a href="/">
+                                <div class="title">World Class Resorts</div>
+                            </a>
+                            <div class="desc-cont">
+                                <div class="highlight-bar"></div>
+                                <div class="desc">Go for a drive, put the top down and let the nostalgia blow through your hair.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide two">
+                        <div class="slide-img">
+                            <a href="/">
+                                <img src="includes/public/assets/images/featured-grid.png" alt="">
+                            </a>
+                        </div>
+                        <div class="content">
+                            <a href="/">
+                                <div class="title">World Class Resorts</div>
+                            </a>
+                            <div class="desc-cont">
+                                <div class="highlight-bar"></div>
+                                <div class="desc">Go for a drive, put the top down and let the nostalgia blow through your hair.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide three">
+                        <div class="slide-img">
+                            <a href="/">
+                                <div class="img-cont">
+                                    <picture>
+                                        <source srcset="includes/public/assets/images/featured-grid.png" media="(max-width: 1024px)">
+                                        <img src="includes/public/assets/images/featured-wide.png" alt="">
+                                    </picture>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="content">
+                            <a href="/">
+                                <div class="title">World Class Resorts</div>
+                            </a>
+                            <div class="desc-cont">
+                                <div class="highlight-bar"></div>
+                                <div class="desc">Go for a drive, put the top down and let the nostalgia blow through your hair.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide four">
+                        <div class="slide-img">
+                            <a href="/">
+                                <div class="img-cont">
+                                    <picture>
+                                        <source srcset="includes/public/assets/images/featured-grid.png" media="(max-width: 1024px)">
+                                         <img src="includes/public/assets/images/featured-tall.jpg" alt="">
+                                    </picture>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="content">
+                            <a href="/">
+                                <div class="title">World Class Resorts</div>
+                            </a>
+                            <div class="desc-cont">
+                                <div class="highlight-bar"></div>
+                                <div class="desc">Go for a drive, put the top down and let the nostalgia blow through your hair.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- end featured grid -->
+
+
+
+            </div><!-- main cont -->
+        </section>
+        <!--body-section-->
+
+        <!-- /////  FOOTER INCLUDE  ////// -->
+        <div w3-include-html="footer.html"></div>
+
+    </div>
+
+    <!-- !!!!!!!!!!!! DO NOT USE THIS FILE FOR SHELL SETUP !!!!!!!!!!!! -->
+    <script type="text/javascript" src="js/w3.js"></script>
+    <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+    <script type="text/javascript" src="js/nav.js"></script>
+
 
 </body>
+
 </html>
