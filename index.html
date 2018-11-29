@@ -702,33 +702,7 @@
 
     <!-- search -->
     <script type="text/javascript">
-        var search = $(".header-section .primary-search");
-        var searchToggle = $(".header-section .open-search");
-        var logo = $(".header-section .logo");
-
-        searchToggle.on("click", function () {
-            if($(window).width() < 675){
-                logo.toggleClass("hidden");
-                search.toggleClass("active");
-            }else{
-                search.toggleClass("active");
-            }
-        });
-    </script>
-
-    <script type="text/javascript">
         $(document).ready(function(){
-            // function animatePanel(){
-            //     var tl = new TimelineMax();
-            //     var target = $(".nav-callout-panel");
-            //     var lines = target.find(".line");
-            //     var content = target.find(".content");
-            //     tl.to(lines[0], 0.8, {opacity: 1, yPercent: -30}, 0.8). 
-            //     to(lines[1], 0.8, {opacity: 1, yPercent: -30}, 1). 
-            //     to(content[0], 0.5, {opacity: 1, yPercent: -30}, 1). 
-            //     to(content[1], 0.5, {opacity: 1, yPercent: -30}, 1.2). 
-            //     to(content[2], 0.5, {opacity: 1, yPercent: -30}, 1.4);
-            // }
             function ScrollHandler(pageId) { 
                 var page = $('#' + pageId);
                 var pageStart = page.offset().top;
@@ -737,32 +711,44 @@
                 function scrollToPage() {
                     var target1 = $("#two").offset().top;
                     var target2 = $("#three").offset().top;
-                    console.log(pageStart+" "+target1+" "+target2)
+                    
                     if(pageStart === target1){
                         var tl1 = new TimelineMax();
                         var target = $(".nav-callout-panel");
                         var lines = target.find(".line");
                         var content = target.find(".content");
-                        tl1.to(lines[0], 0.8, {opacity: 1, yPercent: -30}, 0.8). 
-                        to(lines[1], 0.8, {opacity: 1, yPercent: -30}, 1). 
-                        to(content[0], 1, {opacity: 1, yPercent: -30}, 1.3). 
-                        to(content[1], 1, {opacity: 1, yPercent: -30}, 1.5). 
-                        to(content[2], 1, {opacity: 1, yPercent: -30}, 1.7);
+                        if(!target.hasClass("scrolled")){
+                            tl1.set(lines[0], {yPercent: 30}). 
+                            set(lines[1], {yPercent: 30}).
+                            to(lines[0], 0.8, {opacity: 1, yPercent: 0}, 0.8). 
+                            to(lines[1], 0.8, {opacity: 1, yPercent: 0}, 1). 
+                            to(content[0], 1, {opacity: 1, yPercent: -30}, 1.3). 
+                            to(content[1], 1, {opacity: 1, yPercent: -30}, 1.5). 
+                            to(content[2], 1, {opacity: 1, yPercent: -30}, 1.7);
+                        }else{
+                            target.removeClass("scrolled");
+                            tl1.to(lines[0], 0.8, {opacity: 1, yPercent: 0}, 1.7). 
+                            to(lines[1], 0.8, {opacity: 1, yPercent: 0}, 1.5). 
+                            to(content[0], 1, {opacity: 1, yPercent: 30}, 1.3). 
+                            to(content[1], 1, {opacity: 1, yPercent: 30}, 1). 
+                            to(content[2], 1, {opacity: 1, yPercent: 30}, 0.8);
+                        }
                     }
                     if(pageStart < target1){
                         var tl2 = new TimelineMax();
                         var target = $(".nav-callout-panel");
                         var lines = target.find(".line");
                         var content = target.find(".content");
-                        tl2.set(lines[0], {opacity: 0, yPercent: 30}, 1.2). 
-                        set(lines[1], {opacity: 0, yPercent: 30}, 1.2). 
+                        tl2.set(lines[0], {opacity: 0, yPercent: 0}, 1.2). 
+                        set(lines[1], {opacity: 0, yPercent: 0}, 1.2). 
                         set(content[0], {opacity: 0, yPercent: 30}, 1.2). 
                         set(content[1], {opacity: 0, yPercent: 30}, 1.2). 
                         set(content[2], {opacity: 0, yPercent: 30}, 1.2);
                     }
-                    if(pageStart > target1){
+                    if(pageStart === target2){
                         var tl2 = new TimelineMax();
                         var target = $(".nav-callout-panel");
+                        target.addClass("scrolled");
                         var lines = target.find(".line");
                         var content = target.find(".content");
                         tl2.set(lines[0], {opacity: 0, yPercent: -30}, 1.2). 
@@ -770,17 +756,6 @@
                         set(content[0], {opacity: 0, yPercent: -30}, 1.2). 
                         set(content[1], {opacity: 0, yPercent: -30}, 1.2). 
                         set(content[2], {opacity: 0, yPercent: -30}, 1.2);
-                    }
-                    if(pageStart === target2){
-                        var tl1 = new TimelineMax();
-                        var target = $(".nav-callout-panel");
-                        var lines = target.find(".line");
-                        var content = target.find(".content");
-                        tl1.to(lines[0], 0.8, {opacity: 1, yPercent: -30}, 1.4).
-                        to(lines[1], 0.8, {opacity: 1, yPercent: -30}, 1.2). 
-                        to(content[0], 0.5, {opacity: 1, yPercent: -30}, 1). 
-                        to(content[1], 0.5, {opacity: 1, yPercent: -30}, 1).
-                        to(content[2], 0.5, {opacity: 1, yPercent: -30}, 0.8);
                     }
                     pageJump = true;
                     $('html, body').animate({ 
@@ -824,40 +799,6 @@
             new ScrollHandler('one'); 
             new ScrollHandler('two');
             new ScrollHandler('three');
-
-            // window.addEventListener("wheel", function(event){
-            //     var t1 = $("#two");
-            //     var t2 = $("#three");
-            //     var s1 = t1.offset().top;
-            //     var s2 = t2.offset().top;
-            //     if($(window).scrollTop() === s1){
-            //         console.log("Two in view")
-            //     }
-            //     if($(window).scrollTop() === s2){
-            //         console.log("Three")
-            //     }
-            // });
-
-            // function animateWindow(){
-            //     var t1 = $("#one").height();
-            //     var t2 = $("#two").height();
-            //     var t3 = $("#three").height();
-            //     var t1Top = $("#one").scrollTop();
-            //     var t2Top = $("#two").scrollTop();
-            //     var t3Top = $("#three").scrollTop();
-            //     var lastScrollTop = 0;
-            //     $(window).on("scroll", function(){
-            //         var st = $(this).scrollTop();
-            //         if (st > lastScrollTop){
-            //             console.log("down")
-            //         } else {
-            //             console.log("up")
-            //         }
-            //         lastScrollTop = st;
-            //     });
-            // }
-
-            // new animateWindow();
 
         });
     </script>
