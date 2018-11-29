@@ -17,6 +17,7 @@
     <link href="css/nav-shared.css" rel="stylesheet" type="text/css" />
     <link href="css/social.css" rel="stylesheet" type="text/css" />
     <link href="css/shared-form.css" rel="stylesheet" type="text/css" />
+    <link href="css/vguide.css" rel="stylesheet" type="text/css" />
 
     <script src="//code.jquery.com/jquery-1.8.1.min.js"></script>
     <script src="//code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
@@ -46,7 +47,16 @@
             <div class="top-nav-cont">
                 <div class="nav-controls">
                     <div class="controls-inner">
-                        <div class="control-item">
+                        <div class="control-item mobile hide-for-large-up" data-toggle-mobilenav>
+                            <div class="hamburger">
+                                <div class="nav-bars" id="icon-open">
+                                    <div class="nav-bar"></div>
+                                    <div class="nav-bar"></div>
+                                    <div class="nav-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control-item primary show-for-large-up">
                             <div class="hamburger">
                                 <div class="nav-bars" id="icon-open">
                                     <div class="nav-bar"></div>
@@ -57,9 +67,9 @@
                                     <path fill="white" stroke="white" d="M24 1.485L22.515 0 12 10.515 1.485 0 0 1.485 10.515 12 0 22.515 1.485 24 12 13.484 22.515 24 24 22.515 13.484 12z"></path>
                                 </svg>
                             </div>
-                            <span>Menu</span>
+                            <span class="show-for-large-up">Menu</span>
                         </div>
-                        <div class="control-item">
+                        <div class="control-item show-for-large-up">
                             <div class="nav-back" data-menu-back>
                                 <i class="fas fa-angle-left"></i>
                                 <span>Back</span>
@@ -72,9 +82,12 @@
                 </div>
                 <div class="header-right">
                     <div class="search-cont" data-toggle-search>
-                        <i class="fas fa-search"></i>
+                        <form action="/" method="GET" class="primary-search">
+                            <input type="text" placeholder="Search...">
+                        </form>
+                        <img class="open-search" src="includes/public/assets/images/search-icon.png" alt="">
                     </div>
-                    <a href="/" class="booking-link">
+                    <a href="/" class="booking-link show-for-large-up">
                         Book Now
                     </a>
                 </div>
@@ -85,18 +98,82 @@
                     <div class="item-inner" data-direction="btlrg">
                         <div class="side-menu">
                             <div class="content-wrapper">
-                                <ul class="menu-list nav-primary anim">
-                                    <li class="primary-item">
-                                        <a href="/">things to do<i class="fas fa-plus"></i></a>
+                                <ul class="menu-list nav-primary">
+                                    <li class="primary-item has-submenu" data-navitem="1">
+                                        <a href="/">things to do</a><i class="fas fa-plus toggle"></i>
+                                    </li>
+                                    <li class="primary-item" data-navitem="2">
+                                        <a href="/">places to go</a><i class="fas fa-plus toggle"></i>
                                     </li>
                                     <li class="primary-item">
-                                        <a href="/">places to go<i class="fas fa-plus"></i></a>
-                                    </li>
-                                    <li class="primary-item">
-                                        <a href="/">plan your trip<i class="fas fa-plus"></i></a>
+                                        <a href="/">plan your trip</a><i class="fas fa-plus toggle"></i>
                                     </li>
                                 </ul>
                             </div>
+                            <ul class="submenu" data-submenu="1">
+                                <li class="heading">
+                                    Things To Do
+                                </li>
+                                <li>
+                                    <a href="/">Arts &amp; Culture</a>
+                                </li>
+                                <li>
+                                    <a href="/">Arts &amp; Culture</a>
+                                </li>
+                                <li>
+                                    <a href="/">Arts &amp; Culture</a>
+                                </li>
+                                <li>
+                                    <a href="/">Arts &amp; Culture</a>
+                                </li>
+                                <li>
+                                    <a href="/">Arts &amp; Culture</a>
+                                </li>
+                                <li>
+                                    <a href="/">Arts &amp; Culture</a>
+                                </li>
+                                <li>
+                                    <a href="/">Arts &amp; Culture</a>
+                                </li>
+                                <li>
+                                    <a href="/">Arts &amp; Culture</a>
+                                </li>
+                                <li>
+                                    <a href="/">Arts &amp; Culture</a>
+                                </li>
+                            </ul>
+                            <ul class="submenu" data-submenu="2">
+                                <li class="heading">
+                                    Places to Go
+                                </li>
+                                <li>
+                                    <a href="/">Arts &amp; Culture</a>
+                                </li>
+                                <li>
+                                    <a href="/">Arts &amp; Culture</a>
+                                </li>
+                                <li>
+                                    <a href="/">Arts &amp; Culture</a>
+                                </li>
+                                <li>
+                                    <a href="/">Arts &amp; Culture</a>
+                                </li>
+                                <li>
+                                    <a href="/">Arts &amp; Culture</a>
+                                </li>
+                                <li>
+                                    <a href="/">Arts &amp; Culture</a>
+                                </li>
+                                <li>
+                                    <a href="/">Arts &amp; Culture</a>
+                                </li>
+                                <li>
+                                    <a href="/">Arts &amp; Culture</a>
+                                </li>
+                                <li>
+                                    <a href="/">Arts &amp; Culture</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -149,15 +226,131 @@
                     </div>
                 </div>
             </nav>
+            <div class="mobilenav hide-for-large-up">
+                <div class="mobile-dd">
+                    <ul class="nav-list-mobile primary">
+                        <li class="has-submenu">
+                            <div class="item-inner">
+                                <a href="/">things to do</a>
+                                <i class="fas fa-plus toggle" data-menu-toggle-parent></i>
+                            </div>
+                            <ul class="nav-list-mobile industry">
+                                <div class="close-submenu">Back</div>
+                                <li class="heading">Things To Do</li>
+                                <li>
+                                    <div class="item-inner">
+                                        <a href="/">Things to do Child</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-inner">
+                                        <a href="/">Things to do Child</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-inner">
+                                        <a href="/">Things to do Child</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-inner">
+                                        <a href="/">Things to do Child</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-inner">
+                                        <a href="/">Things to do Child</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-inner">
+                                        <a href="/">Things to do Child</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu">
+                            <div class="item-inner">
+                                <a href="/">places to go</a>
+                                <i class="fas fa-plus toggle" data-menu-toggle-parent></i>
+                            </div>
+                            <ul class="nav-list-mobile industry">
+                                <div class="close-submenu">Back</div>
+                                <li class="heading">Places To Go</li>
+                                <li>
+                                    <div class="item-inner">
+                                        <a href="/">places to go child</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-inner">
+                                        <a href="/">places to go child</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-inner">
+                                        <a href="/">places to go child</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-inner">
+                                        <a href="/">places to go child</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu">
+                            <div class="item-inner">
+                                <a href="/">plan your trip</a>
+                                <i class="fas fa-plus toggle" data-menu-toggle-parent></i>
+                            </div>
+                            <ul class="nav-list-mobile industry">
+                                <div class="close-submenu">Back</div>
+                                <li class="heading">Plan Your Trip</li>
+                                <li>
+                                    <div class="item-inner">
+                                        <a href="/">plan your trip child</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-inner">
+                                        <a href="/">plan your trip child</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-inner">
+                                        <a href="/">plan your trip child</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-inner">
+                                        <a href="/">plan your trip child</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-inner">
+                                        <a href="/">plan your trip child</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <script>
             $(document).ready(function () {
                 var root = $(".header-section");
-                var menuControl = root.find(".nav-controls");
+                var menuControl = root.find(".control-item.primary");
                 var openMenu = root.find("#icon-open");
                 var closeMenu = root.find("#icon-close");
                 var menuItems = root.find(".main-nav .menu-item .item-inner");
+                var menuRoot = $(".main-nav .side-menu");
+                var primary = menuRoot.find(".nav-primary");
+                var toggle = menuRoot.find(".primary-item .toggle");
+                var subMenu = menuRoot.find(".submenu");
+                var backBtn = root.find(".nav-back");
 
                 function init() {
                     menuItems.each(function () {
@@ -206,50 +399,66 @@
                 init();
 
                 function reInit() {
-                    menuItems.each(function () {
-                        if ($(this).attr("data-direction") === "btlrg") {
-                            var tl = new TimelineMax();
-                            var t = $(this);
-                            var b = t.parent().find(".border");
-                            var l = t.find(".menu-list");
-                            tl.set(t, { yPercent: 0 }).
-                                set(l, { yPercent: 0, xPercent: -50 }).
-                                set(b, { xPercent: 0 });
-                        }
-                        if ($(this).attr("data-direction") === "lr") {
-                            var tl = new TimelineMax();
-                            var t = $(this);
-                            var s = t.find(".nav-slide");
-                            tl.set(t, { xPercent: 0 }).
-                                set(s, { xPercent: 0 });
-                        }
-                        if ($(this).attr("data-direction") === "bt") {
-                            var tl = new TimelineMax();
-                            var t = $(this);
-                            var s = t.find(".nav-slide");
-                            tl.set(t, { yPercent: 0 }).
-                                set(s, { yPercent: 0 });
-                        }
-                        if ($(this).attr("data-direction") === "rl") {
-                            var tl = new TimelineMax();
-                            var t = $(this);
-                            var s = t.find(".nav-slide");
-                            tl.set(t, { xPercent: 0 }).
-                                set(s, { xPercent: 0 });
-                        }
-                        if ($(this).attr("data-direction") === "tb") {
-                            var tl = new TimelineMax();
-                            var t = $(this);
-                            var i = t.find(".social-icons");
-                            var b = t.parent().find(".border");
-                            tl.set(t, { yPercent: 0 }).
-                                set(i, { yPercent: -50 }).
-                                set(b, { xPercent: 0 });
-                        }
-                    });
+                    if (root.hasClass("active-nav")) {
+                        menuItems.each(function () {
+                            if ($(this).attr("data-direction") === "btlrg") {
+                                var tl = new TimelineMax();
+                                var t = $(this);
+                                var b = t.parent().find(".border");
+                                var l = t.find(".menu-list");
+                                tl.set(t, { yPercent: 0 }).
+                                    set(l, { yPercent: 0, xPercent: -50 }).
+                                    set(b, { xPercent: 0 });
+                            }
+                            if ($(this).attr("data-direction") === "lr") {
+                                var tl = new TimelineMax();
+                                var t = $(this);
+                                var s = t.find(".nav-slide");
+                                tl.set(t, { xPercent: 0 }).
+                                    set(s, { xPercent: 0 });
+                            }
+                            if ($(this).attr("data-direction") === "bt") {
+                                var tl = new TimelineMax();
+                                var t = $(this);
+                                var s = t.find(".nav-slide");
+                                tl.set(t, { yPercent: 0 }).
+                                    set(s, { yPercent: 0 });
+                            }
+                            if ($(this).attr("data-direction") === "rl") {
+                                var tl = new TimelineMax();
+                                var t = $(this);
+                                var s = t.find(".nav-slide");
+                                tl.set(t, { xPercent: 0 }).
+                                    set(s, { xPercent: 0 });
+                            }
+                            if ($(this).attr("data-direction") === "tb") {
+                                var tl = new TimelineMax();
+                                var t = $(this);
+                                var i = t.find(".social-icons");
+                                var b = t.parent().find(".border");
+                                tl.set(t, { yPercent: 0 }).
+                                    set(i, { yPercent: -50 }).
+                                    set(b, { xPercent: 0 });
+                            }
+                        });
+
+                    }
+
                 }
 
                 function animateMenu() {
+                    if (menuRoot.hasClass("submenu-active")) {
+                        var tl = new TimelineMax();
+                        subMenu.each(function () {
+                            var items = $(this).find("li");
+                            tl.set(items, { xPercent: -101 });
+                        });
+                        menuRoot.removeClass("submenu-active");
+                    }
+                    if (backBtn.hasClass("active")) {
+                        backBtn.removeClass("active");
+                    }
+                    root.toggleClass("active-nav");
                     $(this).toggleClass("active");
                     if ($(this).hasClass("active")) {
                         var tl = new TimelineMax();
@@ -356,13 +565,51 @@
                                         var i = t.find(".social-icons");
                                         var b = t.parent().find(".border");
                                         tl.to(t, 0.4, { yPercent: -101, ease: Quart.easeInOut }, 0.2).
-                                            to(i, 0.5, { yPercent: 100, ease: Quart.easeInOut }, 0)
-                                        to(b, 0.3, { xPercent: 101 }, 0);
+                                            to(i, 0.5, { yPercent: 100, ease: Quart.easeInOut }, 0).
+                                            to(b, 0.3, { xPercent: 101 }, 0);
                                     }
                                 });
                             }, 0);
                     }
                 }
+
+                // submenu
+
+                function animateSubMenu(d) {
+                    backBtn.addClass("active");
+                    var tl = new TimelineMax();
+                    if (menuRoot.hasClass("submenu-active")) {
+                        subMenu.each(function () {
+                            if ($(this).attr("data-submenu") === d) {
+                                var sub = $(this);
+                                sub.addClass("active");
+                                tl.to(primary, 0.2, { opacity: 0 });
+                            }
+                        });
+                    } else {
+                        subMenu.each(function () {
+                            if ($(this).hasClass("active")) {
+                                $(this).removeClass("active");
+                            }
+                        });
+                    }
+                }
+
+                toggle.on("click", function () {
+                    menuRoot.addClass("submenu-active");
+                    var d = $(this).parent().attr("data-navitem");
+                    animateSubMenu(d);
+                });
+
+                backBtn.on("click", function () {
+                    menuRoot.removeClass("submenu-active");
+                    $(this).removeClass("active");
+                    var tl = new TimelineMax();
+                    subMenu.each(function () {
+                        $(this).removeClass("active");
+                        tl.to(primary, 0.3, { opacity: 1 });
+                    });
+                });
 
                 menuControl.on("click", animateMenu);
 
@@ -374,43 +621,71 @@
 
         <!-- //////  HEADER  SLIDESHOW //////// -->
 
-        <!-- <section class="header-slideshow">
-        <div class="home-header">
-            <div class="item">
-                <img src="includes/public/assets/images/header-slideshow1.jpg" />
-            </div>
-            <div class="item">
-                <img src="includes/public/assets/images/header-slideshow2.jpg" />
-            </div>
-            <div class="item">
-                <img src="includes/public/assets/images/header-slideshow3.jpg" />
-            </div>
-        </div>      
-    </section>
-
-    <script>
-        $(document).ready(function(){
-            $('.home-header').slick({
-                infinite: true,
-                arrows: true,
-                dots: true,
-                autoplay: true,
-                fade: true,
-                prevArrow: '<div class="arrow-cont"><div type="button" data-role="none" class="slick-prev" aria-label="previous"><img src="includes/public/assets/images/arrow-prev.png"/></div></div>',
-                nextArrow: '<div class="arrow-cont"><div type="button" data-role="none" class="slick-next" aria-label="next"><img src="includes/public/assets/images/arrow-next.png"/></div></div>'
-            });
-
-            $(window).on('resize orientationchange', function() {
-                $('.home-header').slick('resize');
-            });
-
-        });
-    </script>    -->
+        <section class="header-slideshow" id="one">
+            <div class="home-header">
+                <div class="item">
+                    <div class="img-cont">
+                        <picture>
+                            <source srcset="includes/public/assets/images/header-slide.png" media="(max-width: 640px)">
+                            <img src="includes/public/assets/images/regional.png" />
+                        </picture>
+                    </div>
+                    <div class="logo"></div>
+                </div>
+            </div>   
+            <div class="scroller show-for-large-up">
+                <img src="includes/public/assets/images/scroll-img.png" alt="">
+            </div>   
+        </section>  
 
         <!-- //////  BODY  //////// -->
         <section class="body-section">
             <div class="maincont">
-
+                <video id="hero-vid" poster autoplay loop muted>
+                    <source type="video/webm" src="includes/public/assets/images/texas.webm">
+                </video>
+                <div class="nav-callout-panel" id="two">
+                    <div class="line one"></div>
+                    <div class="line two"></div>
+                    <div class="item">
+                        <div class="content">
+                            <h2>things to do</h2>
+                            <p class="desc show-for-large-up">
+                                Let's Texas starts here. Find uniquely Texas activities that you never knew existed.
+                            </p>
+                            <a href="/" class="link">View More</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="content">
+                            <h2>places to go</h2>
+                            <p class="desc show-for-large-up">
+                                Let's Texas starts here. Find uniquely Texas activities that you never knew existed.
+                            </p>
+                            <a href="/" class="link">View More</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="content">
+                            <h2>plan your trip</h2>
+                            <p class="desc show-for-large-up">
+                                Let's Texas starts here. Find uniquely Texas activities that you never knew existed.
+                            </p>
+                            <a href="/" class="link">View More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="vguide-panel" id="three">
+                    <div class="vguide">
+                        <div class="img-cont">
+                            <img src="includes/public/assets/images/vguide.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h2>get your free travel texas guide</h2>
+                            <a href="/" class="link">Request a Copy</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -425,8 +700,166 @@
 
     <script type="text/javascript" src="js/nav.js"></script>
 
+    <!-- search -->
     <script type="text/javascript">
+        var search = $(".header-section .primary-search");
+        var searchToggle = $(".header-section .open-search");
+        var logo = $(".header-section .logo");
 
+        searchToggle.on("click", function () {
+            if($(window).width() < 675){
+                logo.toggleClass("hidden");
+                search.toggleClass("active");
+            }else{
+                search.toggleClass("active");
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // function animatePanel(){
+            //     var tl = new TimelineMax();
+            //     var target = $(".nav-callout-panel");
+            //     var lines = target.find(".line");
+            //     var content = target.find(".content");
+            //     tl.to(lines[0], 0.8, {opacity: 1, yPercent: -30}, 0.8). 
+            //     to(lines[1], 0.8, {opacity: 1, yPercent: -30}, 1). 
+            //     to(content[0], 0.5, {opacity: 1, yPercent: -30}, 1). 
+            //     to(content[1], 0.5, {opacity: 1, yPercent: -30}, 1.2). 
+            //     to(content[2], 0.5, {opacity: 1, yPercent: -30}, 1.4);
+            // }
+            function ScrollHandler(pageId) { 
+                var page = $('#' + pageId);
+                var pageStart = page.offset().top;
+                var pageJump = false;
+
+                function scrollToPage() {
+                    var target1 = $("#two").offset().top;
+                    var target2 = $("#three").offset().top;
+                    console.log(pageStart+" "+target1+" "+target2)
+                    if(pageStart === target1){
+                        var tl1 = new TimelineMax();
+                        var target = $(".nav-callout-panel");
+                        var lines = target.find(".line");
+                        var content = target.find(".content");
+                        tl1.to(lines[0], 0.8, {opacity: 1, yPercent: -30}, 0.8). 
+                        to(lines[1], 0.8, {opacity: 1, yPercent: -30}, 1). 
+                        to(content[0], 1, {opacity: 1, yPercent: -30}, 1.3). 
+                        to(content[1], 1, {opacity: 1, yPercent: -30}, 1.5). 
+                        to(content[2], 1, {opacity: 1, yPercent: -30}, 1.7);
+                    }
+                    if(pageStart < target1){
+                        var tl2 = new TimelineMax();
+                        var target = $(".nav-callout-panel");
+                        var lines = target.find(".line");
+                        var content = target.find(".content");
+                        tl2.set(lines[0], {opacity: 0, yPercent: 30}, 1.2). 
+                        set(lines[1], {opacity: 0, yPercent: 30}, 1.2). 
+                        set(content[0], {opacity: 0, yPercent: 30}, 1.2). 
+                        set(content[1], {opacity: 0, yPercent: 30}, 1.2). 
+                        set(content[2], {opacity: 0, yPercent: 30}, 1.2);
+                    }
+                    if(pageStart > target1){
+                        var tl2 = new TimelineMax();
+                        var target = $(".nav-callout-panel");
+                        var lines = target.find(".line");
+                        var content = target.find(".content");
+                        tl2.set(lines[0], {opacity: 0, yPercent: -30}, 1.2). 
+                        set(lines[1], {opacity: 0, yPercent: -30}, 1.2). 
+                        set(content[0], {opacity: 0, yPercent: -30}, 1.2). 
+                        set(content[1], {opacity: 0, yPercent: -30}, 1.2). 
+                        set(content[2], {opacity: 0, yPercent: -30}, 1.2);
+                    }
+                    if(pageStart === target2){
+                        var tl1 = new TimelineMax();
+                        var target = $(".nav-callout-panel");
+                        var lines = target.find(".line");
+                        var content = target.find(".content");
+                        tl1.to(lines[0], 0.8, {opacity: 1, yPercent: -30}, 1.4).
+                        to(lines[1], 0.8, {opacity: 1, yPercent: -30}, 1.2). 
+                        to(content[0], 0.5, {opacity: 1, yPercent: -30}, 1). 
+                        to(content[1], 0.5, {opacity: 1, yPercent: -30}, 1).
+                        to(content[2], 0.5, {opacity: 1, yPercent: -30}, 0.8);
+                    }
+                    pageJump = true;
+                    $('html, body').animate({ 
+                    scrollTop: pageStart 
+                    }, {
+                    duration: 1200,
+                    complete: function() {
+                        pageJump = false;
+                    }
+                    });  
+                }
+
+                window.addEventListener('wheel', function(event) {
+                var viewStart = $(window).scrollTop();
+                if (!pageJump) { 
+                    var pageHeight = page.height();
+                    var pageStopPortion = pageHeight / 2;
+                    var viewHeight = $(window).height();
+
+                    var viewEnd = viewStart + viewHeight;
+                    var pageStartPart = viewEnd - pageStart;
+                    var pageEndPart = (pageStart + pageHeight) - viewStart;
+                    
+                    var canJumpDown = pageStartPart >= 0; 
+                    var stopJumpDown = pageStartPart > pageStopPortion; 
+                    
+                    var canJumpUp = pageEndPart >= 0; 
+                    var stopJumpUp = pageEndPart > pageStopPortion; 
+
+                    var scrollingForward = event.deltaY > 0;
+                    if (  ( scrollingForward && canJumpDown && !stopJumpDown) 
+                        || (!scrollingForward && canJumpUp   && !stopJumpUp)) {
+                        event.preventDefault();
+                        scrollToPage();
+                    } 
+                    } else {
+                        event.preventDefault();
+                    }  
+                });
+                }
+            new ScrollHandler('one'); 
+            new ScrollHandler('two');
+            new ScrollHandler('three');
+
+            // window.addEventListener("wheel", function(event){
+            //     var t1 = $("#two");
+            //     var t2 = $("#three");
+            //     var s1 = t1.offset().top;
+            //     var s2 = t2.offset().top;
+            //     if($(window).scrollTop() === s1){
+            //         console.log("Two in view")
+            //     }
+            //     if($(window).scrollTop() === s2){
+            //         console.log("Three")
+            //     }
+            // });
+
+            // function animateWindow(){
+            //     var t1 = $("#one").height();
+            //     var t2 = $("#two").height();
+            //     var t3 = $("#three").height();
+            //     var t1Top = $("#one").scrollTop();
+            //     var t2Top = $("#two").scrollTop();
+            //     var t3Top = $("#three").scrollTop();
+            //     var lastScrollTop = 0;
+            //     $(window).on("scroll", function(){
+            //         var st = $(this).scrollTop();
+            //         if (st > lastScrollTop){
+            //             console.log("down")
+            //         } else {
+            //             console.log("up")
+            //         }
+            //         lastScrollTop = st;
+            //     });
+            // }
+
+            // new animateWindow();
+
+        });
     </script>
 
 </body>

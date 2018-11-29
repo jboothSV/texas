@@ -23,6 +23,17 @@
     grid-template-rows: 50% 25% 25%;
     -ms-grid-rows: 50% 25% 25%;
     z-index: 998;
+    pointer-events: none;
+}
+
+.header-section.active-nav .main-nav {
+    pointer-events: all;
+}
+
+@media (max-width: 1024px) {
+    .main-nav {
+        display: none;
+    }
 }
 
 .main-nav .menu-item {
@@ -157,13 +168,13 @@
     list-style: none;
 }
 
-.main-nav .menu-item * {
+/* .main-nav .menu-item * {
     pointer-events: none;
 }
 
-.main-nav.active-nav .menu-item * {
+.header-section.active-nav .menu-item * {
     pointer-events: all;
-}
+} */
 
 .main-nav .side-menu .menu-list {
     position: absolute;
@@ -193,13 +204,13 @@
 }
 
 .nav-primary .primary-item {
+    display: flex;
+    align-items: center;
     margin-bottom: 25px;
     text-align: center;
 }
 
 .nav-primary .primary-item a {
-    display: flex;
-    align-items: center;
     font-family: trade-gothic-next-condensed, sans-serif;
     font-size: calc(32px + (46 - 32) * ((100vw - 1025px) / (1665 - 1025)));
     line-height: calc(38px + (50 - 38) * ((100vw - 1025px) / (1665 - 1025)));
@@ -207,10 +218,11 @@
     text-transform: uppercase;
 }
 
-.nav-primary .primary-item a i {
+.nav-primary .primary-item > i {
     font-size: 30px;
     margin-left: 15px;
     color: #a3c8e3;
+    cursor: pointer;
 }
 
 .main-nav .nav-slide {
@@ -258,11 +270,47 @@
     margin: 0;
 }
 
-/*
-|-----------------------------------------------------------------------------------------------------------
-| Interior Nav Widget 
-|-----------------------------------------------------------------------------------------------------------
-*/
+.nav-primary {
+    z-index: 1;
+}
+
+.main-nav .submenu {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 65%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+    margin: 0;
+    list-style: none;
+    padding-top: 125px;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.main-nav .submenu.active {
+    transition: opacity 0.5s;
+    opacity: 1;
+}
+
+.main-nav .submenu li {
+    margin-bottom: 15px;
+}
+
+.main-nav .submenu li a {
+    font-size: 22px;
+    line-height: 28px;
+    color: white;
+    text-transform: none;
+}
+
+.main-nav .submenu .heading {
+    color: #a3c8e3;
+    font-size: 20px;
+    line-height: 24px;
+}
 
 /*
 |-----------------------------------------------------------------------------------------------------------
@@ -275,4 +323,112 @@
 | Mobile Nav 
 |-----------------------------------------------------------------------------------------------------------
 */
+
+.mobilenav {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    max-width: 375px;
+    z-index: 100;
+}
+
+.mobilenav .mobile-dd {
+    display: none;
+    background-color: #202f66;
+}
+
+.mobilenav.active .mobile-dd {
+    display: block;
+}
+
+.mobilenav ul {
+    margin: 0;
+    list-style: none;
+}
+
+.mobilenav ul .item-inner {
+    display: flex;
+    align-items: center;
+}
+
+.mobilenav .nav-list-mobile.primary {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 135px 0;
+}
+
+.mobilenav .nav-list-mobile.primary > li {
+    width: 100%;
+    max-width: 290px;
+    margin: 0 auto 35px;
+}
+
+.mobilenav .nav-list-mobile.primary > li:last-child {
+    margin-bottom: 0;
+}
+
+.mobilenav .nav-list-mobile.primary a {
+    font-size: 36px;
+    line-height: 38px;
+    text-transform: uppercase;
+    color: white;
+    font-family: trade-gothic-next-condensed, sans-serif;
+}
+
+.mobilenav .nav-list-mobile.primary i {
+    font-size: 30px;
+    margin-left: 15px;
+    color: #a3c8e3;
+    cursor: pointer;
+}
+
+.mobilenav .nav-list-mobile.industry {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    background-color: #202f66;
+    padding: 25px 45px;
+}
+
+.mobilenav .nav-list-mobile.primary li.has-submenu.active .nav-list-mobile.industry {
+    display: block;
+}
+
+.mobilenav .nav-list-mobile.industry .heading {
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: none;
+    color: #a3c8e3;
+}
+
+.mobilenav .nav-list-mobile.industry a {
+    font-size: 18px;
+    line-height: 20px;
+    color: white;
+    text-transform: none;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.mobilenav .nav-list-mobile.industry li {
+    margin-bottom: 20px;
+}
+
+.mobilenav .nav-list-mobile.industry li:last-child {
+    margin-bottom: 0;
+}
+
+.mobilenav .nav-list-mobile.industry .close-submenu {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
 
